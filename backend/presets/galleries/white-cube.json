@@ -1,0 +1,10 @@
+{
+  "id":"white-cube","label":"White Cube",
+  "room":{"width":16,"length":22,"height":5.8,"wallColor":"#fbfbf8","floorColor":"#eceae4","ambientIntensity":0.9,"spotIntensity":5.5},
+  "camera":{"position":[0,1.7,8.6],"fov":54},
+  "placements":[
+    {"artworkSlug":"quiet-morning","position":[-3.8,2.1,-10.86],"rotation":[0,0,0],"wall":"north"},
+    {"artworkSlug":"between-seasons","position":[0,2.1,-10.86],"rotation":[0,0,0],"wall":"north"},
+    {"artworkSlug":"soft-distance","position":[3.8,2.1,-10.86],"rotation":[0,0,0],"wall":"north"}
+  ]
+}

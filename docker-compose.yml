@@ -1,0 +1,39 @@
+services:
+  api:
+    build: ./backend
+    restart: unless-stopped
+    volumes:
+      - gallery_data:/app/data
+      - ./backend/media:/app/media
+      - ./backend/presets:/app/presets
+    environment:
+      DATABASE_URL: sqlite:////app/data/gallery.db
+      CORS_ORIGINS: http://localhost
+
+  web:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_API_URL: /api
+        NEXT_PUBLIC_MEDIA_BASE: ""
+        NEXT_PUBLIC_THEME_PRESET: airy
+        NEXT_PUBLIC_GALLERY_PRESET: airy-room
+    restart: unless-stopped
+    environment:
+      INTERNAL_API_URL: http://api:8000/api
+    depends_on:
+      - api
+
+  nginx:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    depends_on:
+      - web
+      - api
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "80:80"
+
+volumes:
+  gallery_data:

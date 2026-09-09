@@ -1,0 +1,12 @@
+{
+  "id":"airy-room","label":"Воздушный зал",
+  "room":{"width":14,"length":20,"height":5.2,"wallColor":"#f4f1e9","floorColor":"#d8cdbd","ambientIntensity":1.15,"spotIntensity":4.5},
+  "camera":{"position":[0,1.65,7.8],"fov":58},
+  "placements":[
+    {"artworkSlug":"quiet-morning","position":[-3.6,2.05,-9.86],"rotation":[0,0,0],"wall":"north"},
+    {"artworkSlug":"between-seasons","position":[0,2.05,-9.86],"rotation":[0,0,0],"wall":"north"},
+    {"artworkSlug":"blue-silence","position":[3.7,2.05,-9.86],"rotation":[0,0,0],"wall":"north"},
+    {"artworkSlug":"garden-after-rain","position":[-6.86,2.05,-2.5],"rotation":[0,1.5707963268,0],"wall":"west"},
+    {"artworkSlug":"light-study","position":[6.86,2.05,-2.0],"rotation":[0,-1.5707963268,0],"wall":"east"}
+  ]
+}

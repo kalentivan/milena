@@ -1,0 +1,6 @@
+{
+  "id":"airy","label":"Airy",
+  "colors":{"background":"#f8f6f1","surface":"#fffefa","text":"#201f1b","muted":"#706d65","accent":"#7f715e","border":"#e6e0d6"},
+  "typography":{"heading":"Georgia, Times New Roman, serif","body":"Inter, Arial, sans-serif"},
+  "radius":"22px","shadow":"0 18px 60px rgba(60,48,34,.08)"
+}

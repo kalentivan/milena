@@ -1,0 +1,6 @@
+{
+  "id":"warm-paper","label":"Warm paper",
+  "colors":{"background":"#f1eadf","surface":"#fbf6ed","text":"#2c261f","muted":"#786b5c","accent":"#8f624d","border":"#ddcfbd"},
+  "typography":{"heading":"Georgia, Times New Roman, serif","body":"Arial, sans-serif"},
+  "radius":"14px","shadow":"0 16px 44px rgba(74,50,31,.10)"
+}

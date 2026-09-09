@@ -1,0 +1,33 @@
+[project]
+name = "milena-gallery-api"
+version = "0.1.1"
+description = "FastAPI backend for the Milena artist website and virtual gallery"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "fastapi==0.116.1",
+    "uvicorn[standard]==0.35.0",
+    "sqlalchemy==2.0.43",
+    "pydantic==2.11.7",
+    "pydantic-settings==2.10.1",
+    "python-multipart==0.0.20",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1,<0.29",
+    "pytest>=8.4.1,<9",
+    "pytest-asyncio>=1.1.0,<2",
+    "ruff>=0.12.11,<0.13",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
