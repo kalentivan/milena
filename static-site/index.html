@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f3ed">
+  <meta name="description" content="Милена Дмитриева — художник из Краснодара, член Союза художников России. Живопись, пастель, акварель. Оригиналы картин и сотрудничество.">
+  <title>Милена Дмитриева — художник | Картины и портфолио</title>
+  <style>
+    :root{--paper:#f6f3ed;--ink:#22221f;--muted:#77766f;--line:#dfdcd4;--serif:Georgia,'Times New Roman',serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+    a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}
+    .wrap{width:min(1200px,calc(100% - 48px));margin:auto}
+    header{position:sticky;top:0;background:rgba(246,243,237,.94);backdrop-filter:blur(14px);z-index:10;border-bottom:1px solid var(--line)}
+    .head{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo{font:24px var(--serif);letter-spacing:.1em}.nav{display:flex;gap:28px;font-size:13px}.nav a:hover,.text-link:hover{text-decoration:underline}
+    .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}
+    .hero{min-height:65vh;display:grid;grid-template-columns:1.15fr .85fr;gap:7vw;align-items:center;padding:86px 0}
+    h1,h2,h3{font-family:var(--serif);font-weight:400}h1{font-size:clamp(54px,8.5vw,118px);letter-spacing:-.05em;line-height:.94;margin:20px 0 32px}
+    .lead{font-size:clamp(16px,1.6vw,20px);line-height:1.65;max-width:570px;color:#55544e}
+    .hero-aside{align-self:end;border-top:1px solid var(--line);padding-top:22px;color:var(--muted);line-height:1.7;font-size:14px}
+    .button{display:inline-flex;justify-content:center;align-items:center;border:1px solid var(--ink);padding:15px 24px;background:var(--ink);color:white;font-size:13px;letter-spacing:.04em}
+    .button.alt{background:transparent;color:var(--ink)}.button:hover{opacity:.78}.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+    section{padding:70px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}
+    h2{font-size:clamp(39px,5vw,68px);letter-spacing:-.035em;margin:8px 0}
+    .filter-group{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 34px}.chip{background:transparent;border:1px solid var(--line);padding:9px 15px;color:var(--muted);font-size:13px}.chip[aria-pressed=true]{border-color:var(--ink);color:var(--ink)}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 20px}
+    .art-card{min-width:0;text-align:left;border:0;background:transparent;padding:0;display:block;color:inherit}
+    .art-image{background:#e7e2d9;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+    .art-image img{width:100%;height:100%;object-fit:contain;display:block}.art-placeholder{font:18px var(--serif);color:#aaa398;padding:28px;text-align:center}
+    .art-card:hover .art-image{outline:1px solid var(--ink);outline-offset:-1px}
+    .art-caption{display:flex;justify-content:space-between;gap:14px;padding-top:15px}.art-title{font:24px var(--serif)}.art-meta{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.6}.art-price{font-size:13px;white-space:nowrap}
+    .empty{padding:40px 0;color:var(--muted)}.about{border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:9vw}
+    .about p{line-height:1.9;color:#55544e}.contact{border-top:1px solid var(--line);padding-bottom:105px}
+    .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:9vw}.contact-copy{font-size:17px;line-height:1.8;color:#55544e}
+    footer{border-top:1px solid var(--line);padding:26px 0 40px;font-size:12px;color:var(--muted)}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    dialog{border:0;padding:0;width:min(900px,calc(100% - 22px));max-height:92vh;background:var(--paper);color:var(--ink);box-shadow:0 20px 100px #0003}
+    dialog::backdrop{background:#1f211fc9}.modal-inner{padding:32px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;overflow:auto;max-height:92vh}
+    .modal-visual{background:#e7e2d9;min-height:280px;display:grid;place-items:center}.modal-visual img{width:100%;max-height:65vh;object-fit:contain}
+    .modal-title{font-size:clamp(32px,4vw,52px);margin:20px 0}.modal-facts{line-height:2;color:var(--muted);font-size:14px}.modal-close{float:right;background:none;border:0;font-size:28px}
+    @media(max-width:850px){.hero,.about,.contact-inner{grid-template-columns:1fr;gap:30px}.hero{min-height:auto;padding:70px 0}.hero-aside{max-width:580px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:560px){.wrap{width:calc(100% - 28px)}.head{min-height:64px}.logo{font-size:19px}.nav{gap:12px;font-size:12px}.nav .optional{display:none}.hero{padding:54px 0 34px}.grid{grid-template-columns:1fr}.art-image{aspect-ratio:5/4}.section-head{display:block}section{padding:42px 0}.modal-inner{grid-template-columns:1fr;padding:18px}.modal-visual{min-height:210px}.foot{display:block}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+<header><div class="wrap head">
+  <a class="logo" href="#top" aria-label="Милена Дмитриева, на главную">MILENA DMITRIEVA</a>
+  <nav class="nav" aria-label="Навигация"><a href="#works">Картины</a><a class="optional" href="#about">О художнике</a><a href="#contact">Контакты</a></nav>
+</div></header>
+<main id="top">
+  <div class="wrap hero">
+    <div><div class="eyebrow">Художник · Краснодар</div><h1>Милена<br>Дмитриева</h1><p class="lead">Оригинальная живопись, пастель и акварель. Работы для частных коллекций, интерьеров и выставочных проектов.</p>
+      <div class="hero-actions"><a class="button" href="#works">Смотреть картины</a><a class="button alt" href="#contact">Предложить сотрудничество</a></div></div>
+    <div class="hero-aside">Член Союза художников России.<br>Работы находятся в Краснодаре.<br>Доставка и условия приобретения обсуждаются индивидуально.</div>
+  </div>
+  <section id="works"><div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">Портфолио</div><h2>Картины</h2></div><div class="art-meta">Выберите серию и откройте работу для подробностей</div></div>
+    <div class="filter-group" id="filters" role="group" aria-label="Фильтр работ по сериям"></div>
+    <div id="artworks" class="grid" aria-live="polite"></div>
+    <p class="empty" id="empty" hidden>В этой категории пока нет опубликованных работ.</p>
+  </div></section>
+  <section class="wrap about" id="about"><div><div class="eyebrow">О художнике</div><h2>Искусство<br>для жизни</h2></div>
+    <div><p>Милена Дмитриева — художник и дизайнер из Краснодара, член Союза художников России. Работает с акварелью, пастелью и масляной живописью.</p>
+      <p>Её произведения участвовали в выставках в России и за рубежом. Открыта к сотрудничеству с галереями, отелями, дизайнерами и частными коллекционерами.</p>
+      <a class="text-link" href="mailto:ivankalent@gmail.com?subject=Сотрудничество%20с%20Миленой%20Дмитриевой">Связаться с арт-менеджером →</a></div>
+  </section>
+  <section class="contact" id="contact"><div class="wrap contact-inner"><div><div class="eyebrow">Приобретение · Выставки · Проекты</div><h2>Связаться</h2></div>
+    <div><p class="contact-copy">Чтобы узнать стоимость и наличие работы, договориться о просмотре или предложить выставку, напишите арт-менеджеру Ивану Калентеенкову.</p>
+      <a class="button" href="mailto:ivankalent@gmail.com?subject=Картины%20Милены%20Дмитриевой">Написать письмо</a><p class="art-meta">ivankalent@gmail.com</p></div>
+  </div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> Милена Дмитриева</span><span>Оригинальные произведения искусства · Краснодар</span></div></footer>
+<dialog id="detail" aria-label="Информация о картине"><div class="modal-inner"><div class="modal-visual" id="modal-visual"></div><div>
+<button class="modal-close" id="close" type="button" aria-label="Закрыть">×</button>
+<div class="eyebrow" id="modal-series"></div><h3 class="modal-title" id="modal-title"></h3><div class="modal-facts" id="modal-facts"></div>
+<p id="modal-description" class="contact-copy"></p><a class="button" id="modal-cta" href="#">Узнать о приобретении</a></div></div></dialog>
+<script>
+"use strict";
+// Добавляйте сюда только подтверждённые произведения. Пути к фотографиям:
+// ./images/dom.webp и т.д. Пока файла нет, покажем аккуратную подпись вместо чужой картины.
+const artworks = [
+ {slug:"dom",title:"Дом",series:"Город",year:2024,technique:"Пастель",width:120,height:84,image:"images/dom.webp",description:"Многоквартирный дом с горящими окнами. За каждым светом — чья-то отдельная жизнь.",price:null,available:null},
+ {slug:"confidence-in-choice",title:"Уверенность в выборе",series:"Море",year:null,technique:"Пастель",width:110,height:75,image:"images/confidence-in-choice.webp",description:"Морская работа Милены Дмитриевой.",price:null,available:null}
+];
+const contact="ivankalent@gmail.com";
+const qs=s=>document.querySelector(s);
+function el(tag,cls,txt){const x=document.createElement(tag);if(cls)x.className=cls;if(txt)x.textContent=txt;return x}
+function makeImage(art,container){const img=el("img");img.src=art.image;img.alt=art.title;img.loading="lazy";const fallback=el("span","art-placeholder","Фотография работы готовится");img.onerror=()=>{img.remove();container.append(fallback)};container.append(img)}
+function detail(art){
+  qs("#modal-series").textContent=art.series;
+  qs("#modal-title").textContent=art.title;
+  qs("#modal-facts").replaceChildren();
+  [art.year?String(art.year)+" год":null,art.technique,art.height+" × "+art.width+" см",art.price?art.price.toLocaleString("ru-RU")+" ₽":null].filter(Boolean).forEach(t=>qs("#modal-facts").append(el("div","",t)));
+  qs("#modal-description").textContent=art.description;
+  qs("#modal-visual").replaceChildren();makeImage(art,qs("#modal-visual"));
+  qs("#modal-cta").href="mailto:"+contact+"?subject="+encodeURIComponent("Картина «"+art.title+"»");
+  qs("#detail").showModal()
+}
+function render(category){
+  const list=category==="Все работы"?artworks:artworks.filter(a=>a.series===category);
+  qs("#artworks").replaceChildren();qs("#empty").hidden=list.length>0;
+  list.forEach(art=>{
+    const card=el("button","art-card");card.type="button";card.setAttribute("aria-label","Открыть картину "+art.title);
+    const image=el("div","art-image");makeImage(art,image);card.append(image);
+    const cap=el("div","art-caption"),left=el("div");left.append(el("div","art-title",art.title));
+    left.append(el("div","art-meta",[art.year,art.technique,art.height+" × "+art.width+" см"].filter(Boolean).join(" · ")));
+    cap.append(left,el("div","art-price",art.price?art.price.toLocaleString("ru-RU")+" ₽":"По запросу"));
+    card.append(cap);card.addEventListener("click",()=>detail(art));qs("#artworks").append(card)
+  })
+}
+const categories=["Все работы",...new Set(artworks.map(a=>a.series))];
+categories.forEach((cat,i)=>{const btn=el("button","chip",cat);btn.type="button";btn.setAttribute("aria-pressed",String(i===0));btn.addEventListener("click",()=>{document.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed","false"));btn.setAttribute("aria-pressed","true");render(cat)});qs("#filters").append(btn)});
+render("Все работы");qs("#close").onclick=()=>qs("#detail").close();qs("#detail").onclick=e=>{if(e.target===qs("#detail"))qs("#detail").close()};qs("#year").textContent=new Date().getFullYear();
+</script>
+</body></html>
